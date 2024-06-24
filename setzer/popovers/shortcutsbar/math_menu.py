@@ -39,7 +39,7 @@ class MathMenuView(Popover):
 
         self.add_action_button('main', _('Include AMS Packages'), 'win.add-packages', GLib.Variant('as', ['amsmath', 'amssymb', 'amsfonts', 'amsthm']))
         self.add_widget(Gtk.Separator.new(Gtk.Orientation.HORIZONTAL))
-        self.add_before_after_item('main', _('Inline Math Section') + ' ($ ... $)', ['$ ', ' $'], shortcut=_('Ctrl') + '+M')
+        self.add_before_after_item('main', _('Inline Meth Section') + ' ($ ... $)', ['$ ', ' $'], shortcut=_('Ctrl') + '+M')
         self.add_before_after_item('main', _('Display Math Section') + ' (\\[ ... \\])', ['\\[ ', ' \\]'], shortcut=_('Shift') + '+Ctrl' + '+M')
         self.add_menu_button(_('Math Environments'), 'math_environments')
         self.add_widget(Gtk.Separator.new(Gtk.Orientation.HORIZONTAL))
