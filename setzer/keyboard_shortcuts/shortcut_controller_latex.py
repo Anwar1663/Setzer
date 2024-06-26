@@ -40,9 +40,11 @@ class ShortcutControllerLaTeX(ShortcutController):
         self.set_accels_for_insert_before_after_action(['\\underline{', '}'], ['<Control>u'])
         self.set_accels_for_insert_before_after_action(['\\texttt{', '}'], ['<Control><Shift>t'])
         self.set_accels_for_insert_before_after_action(['\\emph{', '}'], ['<Control><Shift>e'])
-        self.set_accels_for_insert_before_after_action(['$ ', ' $'], ['<Control>m'])
-        self.set_accels_for_insert_before_after_action(['\\begin{equation}\\begin{split}\n\t eq','\n\end{split}\\end{equation}'], ['<Control><Shift>m'])
-        self.set_accels_for_insert_before_after_action(['\\begin{equation}\n\t\\begin{split}\n\t eq','\n\t\\n\\end{equation}'], ['<Control><Shift>n'])
+
+
+        self.set_accels_for_insert_before_after_action(['\\begin{gather*}\n\t ','\n\\end{gather*}'], ['<Control>m'])
+        self.set_accels_for_insert_before_after_action(['\\begin{matrix}\n\t ','\n\\end{matrix}'], ['<Control><Shift>m'])
+        self.set_accels_for_insert_before_after_action(['\\begin{equation}\n\t\\begin{split}\n\t eq','\n\t\n\\end{equation}'], ['<Control><Shift>n'])
         self.set_accels_for_insert_before_after_action(['\\begin{•}\n\t', '\n\\end{•}'], ['<Control>e'])
         self.set_accels_for_insert_before_after_action(['_{', '}'], ['<Control><Shift>d'])
         self.set_accels_for_insert_before_after_action(['^{', '}'], ['<Control><Shift>u'])
@@ -50,9 +52,9 @@ class ShortcutControllerLaTeX(ShortcutController):
         self.set_accels_for_insert_before_after_action(['\\begin{center}\n\\begin{circuitikz}\n\t \draw ','\n;\n\\end{circuitikz}\n\\end{center}'], ['<Control><shift>c'])
         self.set_accels_for_insert_before_after_action(['() node[',',]{}'], ['<Control><shift>x'])
         self.set_accels_for_insert_before_after_action(['(,) to [',']\n(,)'], ['<Control><shift>b'])
-        self.set_accels_for_insert_before_after_action(['\\begin{tikzpicture}\centering\\begin{axis}\n\\addplot ',';\n\\end{axis}\\end{tikzpicture}'], ['<Control>p'])
+        self.set_accels_for_insert_before_after_action(['\\begin{tikzpicture}\centering\\begin{axis}\n\\addplot {','};\n\\end{axis}\\end{tikzpicture}'], ['<Control>p'])
         self.set_accels_for_insert_before_after_action(['[\ntitle={},\nxlabel={},\nylabel={},\nxmin=0, xmax=10,\nymin=0, ymax=10,\nxtick={0,2,4,6,8},\nytick={0,2,4,6,8},\nlegend pos=north east,\nymajorgrids=true,\ngrid style=dashed,\naxis lines=left',']'],['<Control><shift>p'])
-
+        
         
         
         self.set_accels_for_insert_symbol_action(['\\frac{•}{•}'], ['<Alt><Shift>f'])
