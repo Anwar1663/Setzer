@@ -1,0 +1,4 @@
+<commands>
+  <command name="\author{•}" text="\author{•}" onlymath="False" onlytext="False" onlytabular="False" onlytabbing="False" lowpriority="False" description="" dotlabels="names###"/>
+  <command name="\circuit" text="\circuit" description="" lowpriority="False" dotlabels=""/>
+</commands>

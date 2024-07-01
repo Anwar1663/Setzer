@@ -248,7 +248,10 @@ class Autocomplete(object):
             self.move_cursor_to_offset(end)
         else:
             command = self.items[self.selected_item_index]['command']
-            if command.startswith('\\begin{'):
+            if command == '\\circuit':
+                command = '\\begin{center}\n\\begin{circuitikz}\n\t\\draw (0,0) to [•]\n\t (•,•);\n\\end{circuitikz}\n\\end{center}'
+                self.replace_current_word_in_buffer(text=command, select_dot_and_scroll=True)
+            elif command.startswith('\\begin{'):
                 bracket_pos = command.find('}') + 1
                 command += '\n\t•\n\\end{' + command[7:bracket_pos]
                 self.replace_current_word_in_buffer(command, select_dot_and_scroll=True)

@@ -81,7 +81,7 @@ class LaTeXDB():
 
     def get_commands():
         commands = dict()
-        for filename in ['additional.xml', 'latex-document.xml', 'dynamic.xml', 'tex.xml', 'textcomp.xml', 'graphicx.xml', 'latex-dev.xml', 'amsmath.xml', 'amsopn.xml', 'amsbsy.xml', 'amsfonts.xml', 'amssymb.xml', 'amsthm.xml', 'color.xml', 'url.xml', 'geometry.xml', 'glossaries.xml', 'beamer.xml', 'hyperref.xml']:
+        for filename in ['custom.xml','additional.xml', 'latex-document.xml', 'dynamic.xml', 'tex.xml', 'textcomp.xml', 'graphicx.xml', 'latex-dev.xml', 'amsmath.xml', 'amsopn.xml', 'amsbsy.xml', 'amsfonts.xml', 'amssymb.xml', 'amsthm.xml', 'color.xml', 'url.xml', 'geometry.xml', 'glossaries.xml', 'beamer.xml', 'hyperref.xml']:
             tree = ET.parse(os.path.join(LaTeXDB.resources_path, 'latexdb', 'commands', filename))
             root = tree.getroot()
             for child in root:
