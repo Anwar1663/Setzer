@@ -54,7 +54,7 @@ class ShortcutControllerLaTeX(ShortcutController):
         self.set_accels_for_insert_before_after_action([' to [',']\n(•,•)'], ['<Control><shift>b'])
         self.set_accels_for_insert_before_after_action(['\\begin{tikzpicture}\centering\\begin{axis}\n\\addplot {','};\n\\end{axis}\\end{tikzpicture}'], ['<Control>p'])
         self.set_accels_for_insert_before_after_action(['[\ntitle={},\nxlabel={},\nylabel={},\nxmin=0, xmax=10,\nymin=0, ymax=10,\nxtick={0,2,4,6,8},\nytick={0,2,4,6,8},\nlegend pos=north east,\nymajorgrids=true,\ngrid style=dashed,\naxis lines=left',']'],['<Control><shift>p'])
-        
+        self.set_accels_for_insert_before_after_action(['\\begin{center}\n\\begin{tabular}{|l|c|r|} \n \\hline \n\t','\n \\\\\\hline \n\\end{tabular}\n\\end{center}'], ['<Control><shift>t'])
         self.set_accels_for_insert_before_after_action(['\\documentclass[12pt]{article}\n\n\\usepackage{init}\n\n\\begin{document}\n\t\\maketitle\n\t\\newpage\n\t\\tableofcontents\n\t\\newpage\n\t\\section{','}\n\t•\n\\end{document}'], ['<Control><Shift>i'])
         
         self.set_accels_for_insert_symbol_action(['\\frac{•}{•}'], ['<Alt><Shift>f'])
